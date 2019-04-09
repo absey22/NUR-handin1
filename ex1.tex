@@ -1,9 +1,17 @@
 \section{Number 1}
 
-The file of this exercise is:
+The script used to generate the results is given by:
 
 \lstinputlisting{ex1.py}
 
 The result of the script is given by:
 
 \lstinputlisting{ex1output.txt}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./plots/rngquality.png}
+  \caption{1(b) In the left panel we see the result of plotting 1000 sequential generations. There does not appear to be any correlations in the plot. The random numbers have been normalized from their nominal $2^{64}-1$ total range. By dividing by this, the output float is normalized to between 0 and 1. The right panel demonstrates the difference between the quality of my generator compared to an ideal uniform (flat) distribution. 1,000,000 values are generated and put into a histogram. The uncertainty of the poission process in each bin in shown in orange as an indicator of distance for each bin from the ideal, which is the horizontal dashed line.}
+  \label{fig:rngquality}
+\end{figure}

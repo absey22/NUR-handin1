@@ -1,30 +1,45 @@
 \section{Number 2}
 
+The script used to generate the results is given by:
 
-
-The script is given by:
 \lstinputlisting{ex2.py}
+
+The result of the script is given by:
 
 It outputs the following results:
 \lstinputlisting{ex2output.txt}
 
 
-%Our script produces the following results, see Fig. \ref{fig:fig1},
-%compare with literature in Fig. \ref{fig:fig2}.
+Our script produces the following results, see Fig. \ref{fig:fig1},
+compare with literature in Fig. \ref{fig:fig2}.
 
 
-%\begin{figure}[h!]
-%  \centering
-%  \includegraphics[width=0.9\linewidth]{./plots/sineplot.png}
-%  \caption{The result of our program, as can be seen the 
-%  sine and cosine are behaving exactly as expected, there 
-%  for we can conclude ....}
-%  \label{fig:fig1}
-%\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./plots/interpolationcomparison.png}
+  \caption{2(b) Comparing the Lagrange polynomials (via Neville's Algorithm) with Linear Interpolation in the specified range of $x_{max} = 10^{-4}$ to $x_{max} = 5.0$. The top panel is polynomial interpolation of degree M-1 = 4. This introduces extra freedom between the data points which moves away from the log profile. Therefore linear interpolation in the bottom panel captures most of the behavior expect at around the virial radius near $x_{max} = 10^{0}$. }
+  \label{fig:interpcompare}
+\end{figure}
 
-%\begin{figure}[h!]
-%  \centering
-%  \includegraphics[width=0.9\linewidth]{./sine.png}
-%  \caption{Literature result, say something...}
-%  \label{fig:fig2}
-%\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./plots/satellitesof1000haloes.png}
+  \caption{2(e) Here 1000 randomly generator haloes have been generated and binned logarithmically to show compare to the expected behavior of the profile dropping off outside the virial radius. We can see the generated data match very well.}
+  \label{fig:1000haloes}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./plots/bi-intersection.png}
+  \caption{2(f) Half the maximum, y, of the profile is shown as the horizontal dashed line. To find intersection points between these two lines, the profile is shifted down by y/2 so that a bisection algorithm can be called on either side of the maximum, represented by the red and blue triangles. The resulting roots are the yellow stars.}
+  \label{fig:intersection}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./plots/poissoncomparison.png}
+  \caption{2(g) Taking the largest radial bin from \ref{fig:1000haloes}, we sort the galaxies falling in that bin by radial distances x. Then taking a histogram}
+  \label{fig:comppoisson}
+\end{figure}

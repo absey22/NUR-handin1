@@ -170,6 +170,7 @@ phi=rng_normalize(phi,0.0,2.*np.pi) #azimuthal angles
 r=rejectionsample(rng(I_0,niter=1000),INTEGRANDdensityprofile,normconst=A)
 
 #display the result:
+print("Via rejection sampling using uniform generators to create radii given the known profile:")
 print(" (   r(x/xvir)   ,  theta(rad)   ,  phi(rad)    )")
 coords=np.stack((r,theta,phi),axis=1)
 print(coords)
