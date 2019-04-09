@@ -20,7 +20,7 @@ print("P_2.6(40) =",poisson(2.6,40))
 
 # ==========================  1(b)   ==========================
 plt.clf()
-plt.tight_layout()
+plt.tight_layout(w_pad=1.0)
 # SEED FOUND IN "myfunctions.py"
 
 
