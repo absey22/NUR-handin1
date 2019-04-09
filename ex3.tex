@@ -4,13 +4,13 @@
 The likelihood function summarizes what we know about the parameters of the function. If we write a likelihood function for the number density profile $n(x)$ (Equation (2)), as a product of observations $i$ of parameters we want to explore, and retain terms dependent only on a, b, and c:
 
 \begin{equation}
-  L(A,a,b,c \vert x) = \prod_{i} A(a,b,c)\left(\frac{x_i}{b}\right)^{a-3}exp\left[-\left(\frac{x_i}{b}\right)^c\right]
+  L(A,a,b,c \vert x) = \prod_{i} A(a,b,c)\left(\frac{x_i}{b}\right)^{a-3}\exp\left[-\left(\frac{x_i}{b}\right)^c\right]
 \end{equation}
 
-The loglikelihood is then $l(A,a,b,c \vert x) = \lnb{L(A,a,b,c \vert x)}$
+The loglikelihood is then $l(A,a,b,c \vert x) = \ln{L(A,a,b,c \vert x)}$
 
 \begin{equation}
-  l(A,a,b,c \vert x) = \sum_{i} \lnb{A(a,b,c)} + (a-3)\lnb{\dfrac{x_i}{b}}-\left(\frac{x_i}{b}\right)^c
+  l(A,a,b,c \vert x) = \sum_{i} \ln{A(a,b,c)} + (a-3)\ln{\dfrac{x_i}{b}}-\left(\frac{x_i}{b}\right)^c
 \end{equation}
 
 
