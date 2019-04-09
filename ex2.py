@@ -212,7 +212,7 @@ plt.xlabel("log(x)")
 plt.xscale("log")
 plt.yscale("log")
 plt.xlim(0.9e-4,5.1)
-plt.legend(loc=2)
+plt.legend(loc=3)
 
 plt.savefig("./plots/satellitesof1000haloes.png")
 
