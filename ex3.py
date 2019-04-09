@@ -27,16 +27,19 @@ larray=[]
 for i in range(len(haloes)):
     halo=haloes[i]
     x=halo[:,0]
-    #generate random a,b,c at this point
+    #generate random a,b,c at this point (*use numpy package)
     a=np.random.uniform(1.1,2.5)
     b=np.random.uniform(0.5,2.0)
     c=np.random.uniform(1.5,4.0)
     #calculating the normalization constant there
     A = trapezoidrule_3Dnorm(INTEGRANDdensityprofile,panels=int(1e5),x1=0,x2=5,A=a,B=b,C=c)
-    larray.append([loglikelihood(A,a,b,c,x),[a,b,c]])
+    calculation=[loglikelihood(A,a,b,c,x),[a,b,c]]
+    larray.append(calculation) #make list of likelihood and a,b,c there
 
-for l in larray:
-    print(max(l[0]))
+for l in larray: #loop through each mass bin
+    massbin=np.asarray(l)
+    litem=np.asarray(l[0])
+    print(massbin[np.argmax(litem[0])][1]) #take a,b,c corresponding to max likelihood
     
 
 
