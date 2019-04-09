@@ -54,6 +54,7 @@ print("  The profile normalization constant is A = %f" % A)
 # ==========================  2(b)   ==========================
 from myfunctions import neville,lininterp
 plt.clf()
+plt.tight_layout()
 
 #make the initial data points
 xpts=np.asarray([1e-4,1e-2,1e-1,1.,5.])
@@ -153,6 +154,7 @@ print("  dn(x)/dx (@ x=b) =", fprime.subs(x,b))
 # ==========================  2(d)   ==========================
 from myfunctions import rejectionsample
 plt.clf()
+plt.tight_layout()
 
 print(" ")
 print(" ------- ")
@@ -177,6 +179,7 @@ print(coords)
 # ==========================  2(e)   ==========================
 from myfunctions import createhaloes
 plt.clf()
+plt.tight_layout()
 
 print(" ")
 print(" ------- ")
@@ -218,6 +221,7 @@ plt.savefig("./plots/satellitesof1000haloes.png")
 # ==========================  2(f)   ==========================
 from myfunctions import bisection
 plt.clf()
+plt.tight_layout()
 
 print(" ")
 print(" ------- ")
@@ -270,6 +274,7 @@ plt.savefig("./plots/bi-intersection.png")
 # ==========================  2(g)   ==========================
 from myfunctions import selectionsort,calcpercentile,poisson
 plt.clf()
+plt.tight_layout()
 
 print(" ")
 print(" ------- ")
@@ -327,6 +332,7 @@ plt.savefig("./plots/poissoncomparison.png")
 # ==========================  2(h)   ==========================
 from myfunctions import lininterp2D_onedim
 plt.clf()
+plt.tight_layout()
 
 print(" ")
 print(" ------- ")
