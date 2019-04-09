@@ -441,7 +441,7 @@ Acubeinterp2_flipped=np.transpose(Acubeinterp2,(2,0,1))
 #interpolate over "b" parameter
 Acubeinterp3=lininterp2D_onedim(Acubeinterp2_flipped,INTEGRANDdensityprofile,adense,bdense,cdense,ax="2",density=density)
 
-print("Interpolating in b leaves",Acubeinterp2.shape[1],"sheets of dimension",Acubeinterp2.shape[0],"which doesn't make sense. It should still be 3D.")
+print("Interpolating in b leaves",Acubeinterp2.shape[1],"sheets of dimension",Acubeinterp2.shape[0])#this is a 2D array which doesn't make sense. It should still be 3D
 
 """
 plt.figure()
