@@ -253,7 +253,7 @@ plt.plot(region1[1]-0.1,0,"r>")
 plt.plot(region2[0]+0.1,0,"b<",label='region 2')
 plt.plot(region2[1],0,"b>")
 plt.plot(xspace,INTEGRANDdensityprofile(xspace))
-plt.hline(y/2,xspace[0],xspace[-1],linestyle=":")
+plt.hlines(y/2,xspace[0],xspace[-1],linestyle=":")
 plt.legend()
 
 
