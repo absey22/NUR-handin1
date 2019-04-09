@@ -9,5 +9,8 @@ print(" ------- ")
 print("Exercise 3(a): ")
 print(" ")
 
-m15=np.genfromtxt("satgals_m11.txt",dtype=float,skip_header=5)
-print(m15)
+fnames=["satgals_m11.txt","satgals_m11.txt","satgals_m11.txt","satgals_m11.txt","satgals_m11.txt","satgals_m11.txt"]
+
+#for i in range(len(fnames)):
+#    halobins.append(np.genfromtxt(fnames[i],dtype=float,skip_header=5))
+
