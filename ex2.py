@@ -226,7 +226,7 @@ plt.tight_layout()
 
 print(" ")
 print(" ------- ")
-print("Exercise 2(f): ")
+print("Exercise 2(f): (and plotted)")
 print(" ")
 
 
@@ -279,7 +279,7 @@ plt.tight_layout()
 
 print(" ")
 print(" ------- ")
-print("Exercise 2(g): ")
+print("Exercise 2(g): (and plotted)")
 print(" ")
 
 
@@ -337,7 +337,7 @@ plt.tight_layout()
 
 print(" ")
 print(" ------- ")
-print("Exercise 2(h): ")
+print("Exercise 2(h): (plotted)")
 print(" ")
 
 aa=np.arange(1.1,2.6,0.1) #15
