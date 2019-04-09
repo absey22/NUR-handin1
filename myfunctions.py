@@ -247,3 +247,15 @@ def lininterp2D_onedim(data,func,aa,bb,cc,ax,density):
             sheetinterp.append(lininterp(xinterp,sample_points,j_low,ydata)) #sheet of 2D interpolation
         cubeinterp.append(sheetinterp) #add each sheet to the new interpolated axis of Acube
     return np.asarray(cubeinterp)
+
+
+
+# ==========================  3(a)   ==========================
+
+#loglikelihood to maximize
+def loglikelihood(normconst,A,B,C,xpt):
+    return np.log(normconst)+ (A-3.)*np.log(xpt/B)-(xpt/B)**C
+
+def INTEGRANDdensityprofile(x,A,B,C):
+    #x=np.float64(x)
+    return (x/B)**(A-1.)*np.exp(-(x/B)**C)
