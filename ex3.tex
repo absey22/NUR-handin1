@@ -1,10 +1,25 @@
 % NUMBER 3
 
-I loaded in the generated mass data files.
 
-To do this exercise I would first generate realizations points x and y from the satellites profile. To do this I would use randomly draw a, b, and c values, the resulting calculated A normalization constant, and then obtain the x-values from the downloaded data sets.
+The likelihood function summarizes what we know about the parameters of the function. If we write a likelihood function for the number density profile $n(x)$ (Equation (2)), as a product of observations $i$ of parameters we want to explore, and retain terms dependent only on a, b, and c:
 
+\begin{equation}
+  L(A,a,b,c \vert x) = \prod_{i} A(a,b,c)\left(\frac{x_i}{b}\right)^{a-3}exp\left[-\left(\frac{x_i}{b}\right)^c\right]
+\end{equation}
+
+The loglikelihood is then $l(A,a,b,c \vert x) = \lnb{L(A,a,b,c \vert x)}$
+
+\begin{equation}
+  l(A,a,b,c \vert x) = \sum_{i} \lnb{A(a,b,c)} + (a-3)\lnb{\dfrac{x_i}{b}}-\left(\frac{x_i}{b}\right)^c
+\end{equation}
+
+
+
+In terms of part (a), the observations we could use to maximize the log-likelihood would be random realizations of points $x_i$ and $n(x_i)$ from the likelihood function. To do this I would use randomly drawn values of a, b, and c, and calculate the A(a,b,c) normalization constant. Then obtaining the x-values from the downloaded data sets, I would have sets of random realizations from which I could maximum the log-likelihood in each data set
+
+
+The script used to generate the results is given by:
 \lstinputlisting{ex3.py}
 
-
+It outputs the following results:
 \lstinputlisting{ex3output.txt}
