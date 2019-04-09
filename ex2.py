@@ -247,7 +247,7 @@ print("1: x,y =",root1,",",4*np.pi*A*INTEGRANDdensityprofile(root1))
 print("2: x,y =",root2,",",4*np.pi*A*INTEGRANDdensityprofile(root2))
 
 plt.plot(root1,INTEGRANDdensityprofile(root1),'y*',label='roots')
-plt.plot(root2,INTEGRANDdensityprofile(root2)),'y*')
+plt.plot(root2,INTEGRANDdensityprofile(root2),'y*')
 plt.plot(region1[0],0,"r<",label='region 1')
 plt.plot(region1[1]-0.1,0,"r>")
 plt.plot(region2[0]+0.1,0,"b<",label='region 2')
