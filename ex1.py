@@ -60,7 +60,6 @@ plt.hlines(50000,0,1,linestyles=':',label='Ideal Uniform Dist.')
 plt.title("n = 1,000,000")
 plt.xlabel("pseudorandom value (0.05 wide bins)")
 plt.ylabel("frequency")
-ax.yaxis.tick_right()
 plt.ylim(45000,52000)
 #plt.yticks([49600,49700,49800,49900,50000,50100,50200,50300])
 
