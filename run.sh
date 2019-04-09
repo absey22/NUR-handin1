@@ -7,6 +7,13 @@ if [ ! -d "plots" ]; then
   mkdir plots
 fi
 
+echo "get data files"
+
+wget https://home.strw.leidenuniv.nl/~daalen/files/satgals_m11.txt
+wget https://home.strw.leidenuniv.nl/~daalen/files/satgals_m12.txt
+wget https://home.strw.leidenuniv.nl/~daalen/files/satgals_m13.txt
+wget https://home.strw.leidenuniv.nl/~daalen/files/satgals_m14.txt
+wget https://home.strw.leidenuniv.nl/~daalen/files/satgals_m15.txt
 
 # Script that returns a plot
 echo "Run the first script ..."

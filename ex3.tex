@@ -10,12 +10,12 @@ The likelihood function summarizes what we know about the parameters of the func
 The loglikelihood is then $l(A,a,b,c \vert x) = \ln{L(A,a,b,c \vert x)}$
 
 \begin{equation}
-  l(A,a,b,c \vert x) = \sum_{i} \ln{A(a,b,c)} + (a-3)\ln{\dfrac{x_i}{b}}-\left(\frac{x_i}{b}\right)^c
+  l(A,a,b,c \vert x) = \sum_{i} \ln{A(a,b,c)} + (a-3)\ln{\left(\dfrac{x_i}{b}\right)}-\left(\frac{x_i}{b}\right)^c
 \end{equation}
 
 
 
-In terms of part (a), the observations we could use to maximize the log-likelihood would be random realizations of points $x_i$ and $n(x_i)$ from the likelihood function. To do this I would use randomly drawn values of a, b, and c, and calculate the A(a,b,c) normalization constant. Then obtaining the x-values from the downloaded data sets, I would have sets of random realizations from which I could maximum the log-likelihood in each data set
+In terms of part (a), the observations we could use to maximize the log-likelihood would be random realizations of points $x_i$ and $n(x_i)$ from the likelihood function. To do this I would use randomly drawn values of a, b, and c, and calculate the A(a,b,c) normalization constant. Then obtaining the x-values from the downloaded data sets, I would have sets of random realizations from which I could maximize the log-likelihood in each data set.
 
 
 The script used to generate the results is given by:
@@ -23,3 +23,6 @@ The script used to generate the results is given by:
 
 It outputs the following results:
 \lstinputlisting{ex3output.txt}
+
+
+An attempt was made at doing part (a) by calculating the loglikehood at many points and finding a maximum.
