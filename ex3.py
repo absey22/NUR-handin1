@@ -39,7 +39,7 @@ for i in range(len(haloes)):
 for l in larray: #loop through each mass bin
     massbin=np.asarray(l)
     litem=np.asarray(l[0])
-    print(massbin[np.argmax(litem[0])][1]) #take a,b,c corresponding to max likelihood
+    print("likelihood max:",massbin[np.argmax(litem[0])]) #take a,b,c corresponding to max likelihood
     
 
 
