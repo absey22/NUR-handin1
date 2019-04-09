@@ -53,6 +53,7 @@ print("  The profile normalization constant is A = %f" % A)
 
 # ==========================  2(b)   ==========================
 from myfunctions import neville,lininterp
+plt.clf()
 
 #make the initial data points
 xpts=np.asarray([1e-4,1e-2,1e-1,1.,5.])
@@ -128,6 +129,7 @@ plt.savefig("./plots/interpolationcomparison.png")
 
 # ==========================  2(c)   ==========================
 from myfunctions import ridders
+plt.clf()
 
 print(" ")
 print(" ------- ")
@@ -150,6 +152,7 @@ print("  dn(x)/dx (@ x=b) =", fprime.subs(x,b))
 
 # ==========================  2(d)   ==========================
 from myfunctions import rejectionsample
+plt.clf()
 
 print(" ")
 print(" ------- ")
@@ -173,6 +176,7 @@ print(coords)
 
 # ==========================  2(e)   ==========================
 from myfunctions import createhaloes
+plt.clf()
 
 print(" ")
 print(" ------- ")
@@ -213,6 +217,7 @@ plt.savefig("./plots/satellitesof1000haloes.png")
 
 # ==========================  2(f)   ==========================
 from myfunctions import bisection
+plt.clf()
 
 print(" ")
 print(" ------- ")
@@ -264,6 +269,7 @@ plt.savefig("./plots/bi-intersection.png")
 
 # ==========================  2(g)   ==========================
 from myfunctions import selectionsort,calcpercentile,poisson
+plt.clf()
 
 print(" ")
 print(" ------- ")
@@ -282,16 +288,14 @@ ind=np.argmax(radialhist)
 #print(radialhist[ind])
 
 #crop the haloes array to this bin
-haloes=[]
+aloes=[]
 for i in range(radialcomponent.shape[0]):
-    halo=radialcomponent[i,:]
-    #print(len(halo))
+    halo=radialcomponent[i,:] #clip each halo to that largest bin
     clippedhalo=halo[(halo>binedges[ind])&(halo<binedges[ind+1])]
-    #print(len(clippedhalo))
     haloes.append(clippedhalo)
 
-#plt.clf()
-galaxies=[gal for gal in haloes for gal in gal]
+
+galaxies=[gal for gal in haloes for gal in gal] #sort them
 sortedgalaxies=selectionsort(galaxies.copy())
 
 #16th, 84th percentile (-1, +1 sigma around mean) and median of sortedgalaxies:
@@ -300,7 +304,7 @@ print("50th percentile (median):",calcpercentile(sortedgalaxies,50))
 print("84th percentile:",calcpercentile(sortedgalaxies,84))
 
 
-#plt.clf()
+
 #---Poisson comparison:
 
 heights=[len(galaxies) for galaxies in haloes]
@@ -322,6 +326,7 @@ plt.savefig("./plots/poissoncomparison.png")
 
 # ==========================  2(h)   ==========================
 from myfunctions import lininterp2D_onedim
+plt.clf()
 
 print(" ")
 print(" ------- ")
@@ -458,7 +463,7 @@ plt.show()
 """
 
 #**************************************************************************************
-#WEIRD BUG I couldnt figure out why my interpolation fails for the final dimension. 
-# The line fitting returns empty arrays from lininterpolation within lininterp2D_onedim
-# (therefore final dimension is not displayed)
+#WEIRD BUG 3D Interpolation: I couldnt figure out why my interpolation fails for the
+# final dimension. The line fitting returns empty arrays from lininterpolation within
+# lininterp2D_onedim (therefore final dimension is not displayed).
 #**************************************************************************************
