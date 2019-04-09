@@ -288,7 +288,7 @@ ind=np.argmax(radialhist)
 #print(radialhist[ind])
 
 #crop the haloes array to this bin
-aloes=[]
+haloes=[]
 for i in range(radialcomponent.shape[0]):
     halo=radialcomponent[i,:] #clip each halo to that largest bin
     clippedhalo=halo[(halo>binedges[ind])&(halo<binedges[ind+1])]
